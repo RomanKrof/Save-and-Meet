@@ -1,0 +1,62 @@
+﻿<Window x:Class="Save_and_Meet.EditOkno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Save_and_Meet"
+        mc:Ignorable="d"
+        Title="EditOkno" Height="350" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Název:" FontSize="15"/>
+            <TextBox Text="{Binding Name}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Místo:" FontSize="15"/>
+            <TextBox Text="{Binding Place}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Content="Čas a datum:" FontSize="15"/>
+            <DatePicker SelectedDate="{Binding Time}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Účastníci:" FontSize="15"/>
+            <TextBox Text="{Binding Participants}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0">
+            <Label Content="Důležitost:" FontSize="15"/>
+            <TextBox Text="{Binding Importance}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Label Content="O čem to bude:" FontSize="15"/>
+            <TextBox Text="{Binding About}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Poznámky:" FontSize="15"/>
+            <TextBox Text="{Binding Notes}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Přidat/Upravit" Margin="20,10,20,0" FontSize="30" Click="AddButton_Click"/>
+    </Grid>
+</Window>
