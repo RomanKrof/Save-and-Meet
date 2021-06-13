@@ -54,6 +54,13 @@ namespace Save_and_Meet
             set { about = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("About")); }
         }
 
+        private string hour;
+        public string Hour
+        {
+            get => hour;
+            set { hour = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Hour")); }
+        }
+
         private string notes;
         public string Notes
         {
@@ -74,6 +81,7 @@ namespace Save_and_Meet
                 Participants = "Nigga",
                 Importance = "Velká",
                 About = "Pipel",
+                Hour = "12",
                 Notes = "Nigel"
             });
         }

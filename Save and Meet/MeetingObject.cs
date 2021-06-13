@@ -20,7 +20,24 @@ namespace Save_and_Meet
         public string Participants { get; set; }
         public string Importance { get; set; }
         public string About { get; set; }
+        public string Hour { get; set; }
         public string Notes { get; set; }
     }
 
+    //public class Rootobject
+    //{
+    //    public result[] Results { get; set; }
+    //}
+
+    //public class result
+    //{
+    //    public string Name { get; set; }
+    //    public string Place { get; set; }
+    //    public DateTime Time { get; set; }
+    //    public string Participants { get; set; }
+    //    public string Importance { get; set; }
+    //    public string About { get; set; }
+    //    public string Hour { get; set; }
+    //    public string Notes { get; set; }
+    //}
 }

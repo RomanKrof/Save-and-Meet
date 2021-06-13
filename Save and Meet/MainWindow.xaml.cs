@@ -36,12 +36,12 @@ namespace Save_and_Meet
 
             for (int i = 0; i < schuze.Results.Length; i++)
             {
-                Meeting.AllMeeting.Add(new Meeting { Name = schuze.Results[i].Name, Place = schuze.Results[i].Place, Time = schuze.Results[i].Time, Participants = schuze.Results[i].Participants, Importance = schuze.Results[i].Importance, About = schuze.Results[i].About, Notes = schuze.Results[i].Notes});
+                Meeting.AllMeeting.Add(new Meeting { Name = schuze.Results[i].Name, Place = schuze.Results[i].Place, Time = schuze.Results[i].Time, Participants = schuze.Results[i].Participants, Importance = schuze.Results[i].Importance, About = schuze.Results[i].About, Hour = schuze.Results[i].Hour, Notes = schuze.Results[i].Notes});
             }
 
             for (int i = 0; i < pschuze.Results.Length; i++)
             {
-                PrivateMeeting.AllMeeting.Add(new PrivateMeeting { Name = schuze.Results[i].Name, Place = schuze.Results[i].Place, Time = schuze.Results[i].Time, Participants = schuze.Results[i].Participants, Importance = schuze.Results[i].Importance, About = schuze.Results[i].About, Notes = schuze.Results[i].Notes});
+                PrivateMeeting.AllMeeting.Add(new PrivateMeeting { Name = pschuze.Results[i].Name, Place = pschuze.Results[i].Place, Time = pschuze.Results[i].Time, Participants = pschuze.Results[i].Participants, Importance = pschuze.Results[i].Importance, About = pschuze.Results[i].About, Hour = pschuze.Results[i].Hour, Notes = pschuze.Results[i].Notes});
             }
 
             //Meeting.InitMeeting();

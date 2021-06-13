@@ -47,7 +47,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="2">
-            <Label Content="Čas a datum:" FontSize="15"/>
+            <Label Content="Datum:" FontSize="15"/>
             <Label Content="{Binding Time}" Margin="20, 0" FontSize="20"/>
         </StackPanel>
 
@@ -66,7 +66,12 @@
             <Label Content="{Binding About}" Margin="20, 0" FontSize="20"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="5" Grid.Column="2">
+            <Label Content="Čas:" FontSize="15"/>
+            <Label Content="{Binding Hour}" Margin="20, 0" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="3">
             <Label Content="Poznámky:" FontSize="15"/>
             <Label Content="{Binding Notes}" Margin="20, 0" FontSize="20"/>
         </StackPanel>

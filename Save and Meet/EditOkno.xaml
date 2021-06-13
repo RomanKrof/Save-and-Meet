@@ -52,7 +52,12 @@
             <TextBox Text="{Binding About}" Margin="20, 0" FontSize="15"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="4" Grid.Column="0">
+            <Label Content="Čas:" FontSize="15"/>
+            <TextBox Text="{Binding Hour}" Margin="20, 0" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="1">
             <Label Content="Poznámky:" FontSize="15"/>
             <TextBox Text="{Binding Notes}" Margin="20, 0" FontSize="15"/>
         </StackPanel>

@@ -24,6 +24,7 @@ namespace Save_and_Meet
                 Participants = "Boofa",
                 Importance = "Velká",
                 About = "Pipel",
+                Hour = "12",
                 Notes = "Nigel"
             });
         }
