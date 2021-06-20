@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Save_and_Meet"
         mc:Ignorable="d"
-        Title="EditOkno" Height="350" Width="600">
+        Title="EditOkno" Height="350" Width="600" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
