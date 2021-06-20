@@ -20,48 +20,60 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1" Grid.Column="0">
-            <Label Content="Název:" FontSize="15"/>
-            <TextBox Text="{Binding Name}" Margin="20, 0" FontSize="15"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Název (povinné):" FontSize="15"/>
+            <TextBox Name="NameBox" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Margin="20, 0" FontSize="15" TextChanged="NameBox_SelectionChanged"/>
         </StackPanel>
+        <Label x:Name="NameError" Grid.Row="1" Grid.Column="1" Foreground="Red"
+               Content="Povinné" Visibility="{Binding NameErrorVisible}"/>
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <Label Content="Místo:" FontSize="15"/>
-            <TextBox Text="{Binding Place}" Margin="20, 0" FontSize="15"/>
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+            <Label Content="Místo (povinné):" FontSize="15"/>
+            <TextBox Name="PlaceBox" Text="{Binding Place, UpdateSourceTrigger=PropertyChanged}" Margin="20, 0" FontSize="15" TextChanged="PlaceBox_SelectionChanged"/>
         </StackPanel>
+        <Label x:Name="PlaceError" Grid.Row="1" Grid.Column="3" Foreground="Red"
+               Content="Povinné" Visibility="{Binding PlaceErrorVisible}"/>
 
-        <StackPanel Grid.Row="2" Grid.Column="0">
-            <Label Content="Čas a datum:" FontSize="15"/>
-            <DatePicker SelectedDate="{Binding Time}" Margin="20, 0" FontSize="15"/>
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Čas a datum (povinné):" FontSize="15"/>
+            <DatePicker Name ="TimeBox" SelectedDate="{Binding Time, UpdateSourceTrigger=PropertyChanged}" Margin="20, 0" FontSize="15" SelectedDateChanged="TimeBox_SelectedDateChanged"/>
         </StackPanel>
+        <Label x:Name="TimeError" Grid.Row="2" Grid.Column="1" Foreground="Red" Margin="10,0,0,0"
+               Content="Povinné" Visibility="{Binding TimeErrorVisible}"/>
 
-        <StackPanel Grid.Row="2" Grid.Column="1">
-            <Label Content="Účastníci:" FontSize="15"/>
+        <StackPanel Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2">
+            <Label Content="Účastníci (nepovinné):" FontSize="15"/>
             <TextBox Text="{Binding Participants}" Margin="20, 0" FontSize="15"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="0">
-            <Label Content="Důležitost:" FontSize="15"/>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Důležitost (nepovinné):" FontSize="15"/>
             <TextBox Text="{Binding Importance}" Margin="20, 0" FontSize="15"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1">
-            <Label Content="O čem to bude:" FontSize="15"/>
-            <TextBox Text="{Binding About}" Margin="20, 0" FontSize="15"/>
+        <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+            <Label Content="O čem (povinné):" FontSize="15"/>
+            <TextBox Name ="AboutBox" Text="{Binding About, UpdateSourceTrigger=PropertyChanged}" Margin="20, 0" FontSize="15" TextChanged="AboutBox_SelectionChanged"/>
         </StackPanel>
+        <Label x:Name="AboutError" Grid.Row="3" Grid.Column="3" Foreground="Red"
+               Content="Povinné" Visibility="{Binding AboutErrorVisible}"/>
 
-        <StackPanel Grid.Row="4" Grid.Column="0">
-            <Label Content="Čas:" FontSize="15"/>
-            <TextBox Text="{Binding Hour}" Margin="20, 0" FontSize="15"/>
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Čas (povinné):" FontSize="15"/>
+            <TextBox Name ="HourBox" Text="{Binding Hour, UpdateSourceTrigger=PropertyChanged}" Margin="20, 0" FontSize="15" TextChanged="HourBox_SelectionChanged"/>
         </StackPanel>
+        <Label x:Name="HourError" Grid.Row="4" Grid.Column="1" Foreground="Red"
+               Content="Povinné" Visibility="{Binding HourErrorVisible}"/>
 
-        <StackPanel Grid.Row="4" Grid.Column="1">
-            <Label Content="Poznámky:" FontSize="15"/>
+        <StackPanel Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2">
+            <Label Content="Poznámky (nepovinné):" FontSize="15"/>
             <TextBox Text="{Binding Notes}" Margin="20, 0" FontSize="15"/>
         </StackPanel>
 
-        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Přidat/Upravit" Margin="20,10,20,0" FontSize="30" Click="AddButton_Click"/>
+        <Button Grid.Row="5" Grid.ColumnSpan="4" Content="Přidat/Upravit" Margin="20,10,20,0" FontSize="30" Click="AddButton_Click"/>
     </Grid>
 </Window>

@@ -78,7 +78,7 @@ namespace Save_and_Meet
                 Name = "Roman",
                 Place = "Krof",
                 Time = new DateTime(2002, 12, 17),
-                Participants = "Nigga",
+                Participants = "Epic",
                 Importance = "Velká",
                 About = "Pipel",
                 Hour = "12",

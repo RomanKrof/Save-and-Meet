@@ -89,6 +89,7 @@ namespace Save_and_Meet
             PrivateMeeting p = new PrivateMeeting();
             LVMeeting.DataContext = p;
             Meeting_SelectionChanged(LVMeeting, null);
+            LVMeeting.SelectedIndex = 0;
         }
 
         private void WorkButton_Click(object sender, RoutedEventArgs e)
@@ -96,6 +97,7 @@ namespace Save_and_Meet
             Meeting m = new Meeting();
             LVMeeting.DataContext = m;
             Meeting_SelectionChanged(LVMeeting, null);
+            LVMeeting.SelectedIndex = 0;
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
