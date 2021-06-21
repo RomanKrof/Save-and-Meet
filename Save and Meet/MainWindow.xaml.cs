@@ -49,6 +49,7 @@ namespace Save_and_Meet
             Meeting m = new Meeting();
             PrivateMeeting p = new PrivateMeeting();
             DataContext = m;
+            LVMeeting.DataContext = m;
         }
 
         private void Meeting_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -62,11 +63,26 @@ namespace Save_and_Meet
             LVMeeting.SelectedIndex = 0;
         }
 
+        //private void Meeting_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        //{
+        //    Meeting me = (Meeting)((sender as ListBox).SelectedItem);
+        //    EditOkno ee = new EditOkno(me);
+        //    ee.ShowDialog();
+        //}
+
         private void Meeting_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Meeting me = (Meeting)((sender as ListBox).SelectedItem);
-            EditOkno ee = new EditOkno(me);
-            ee.ShowDialog();
+            int cis = LVMeeting.Items.Count;
+            if (cis > 0)
+            {
+                Meeting me = (Meeting)((sender as ListBox).SelectedItem);
+                EditOkno ee = new EditOkno(me);
+                ee.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Není co upravit!");
+            }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
