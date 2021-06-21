@@ -160,6 +160,7 @@ namespace Save_and_Meet
                         Meeting.AllMeeting.Add(meet);
                     if (s == "Save_and_Meet.PrivateMeeting")
                         PrivateMeeting.AllMeeting.Add(meet);
+                    this.Close();
                 }
                 else
                 {
